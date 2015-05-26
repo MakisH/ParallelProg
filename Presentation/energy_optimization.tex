@@ -32,6 +32,8 @@
 \begin{frame}[fragile]{Fröttmaning Wind Power Plant}
     Rated power: 1.5 MW
     
+    \pause
+    
     SuperMUC power consumption: \textasciitilde  3.4 MW
     
     \pause
@@ -221,11 +223,15 @@ may restrict the performance to $P_{roof}$.
 \begin{frame}[fragile]{How to get data?}
 We are trying to optimize the "consumed energy", but at which level?
 
-We could measure the energy consumed at \textbf{hardware level}, by using
-the internal CPU event counters. This would give us high measurement frequency,
-but also an overhead due to in-band measurement and model inaccuracies.
+\pause
 
-We could directly measure the energy consumed at \textbf{node or higher level}, by using "smart" power supplies. These give us low frequencies but they can provide useful statistics for long-run applications.
+We could measure the energy consumed at \textbf{hardware level}, by using
+the internal CPU event counters. This would give us high \textbf{measurement frequency},
+and more \textbf{information} but also an \textbf{overhead} due to in-band measurement and model inaccuracies.
+
+\pause
+
+We could directly measure the energy consumed at \textbf{node or higher level}, by using "smart" power supplies. These give us low frequencies but they can provide useful statistics for \textbf{long-run} applications.
 \end{frame}
 
 \subsection{Bob the Builder's tools}
@@ -236,13 +242,15 @@ We could directly measure the energy consumed at \textbf{node or higher level}, 
 \textbf{Optimize performace first!} For this, we need a profiling tool
 to locate the "hot spots" of our code. Already wide-spread tools: gprof, Vampir, Scalasca and other.
 
+\pause
+
 After we optimize performance, what about manipulating \textbf{compiler flags and cpu frequency}?
 \end{frame}
 
 \begin{frame}[fragile]{The Periscope Tuning Framework and AutoTune}
-TUM, LRZ and other European partners develop the Periscope Tuning Framework and the AutoTune plugin: \href{http://periscope.in.tum.de/}{periscope.in.tum.de}.
+TUM, LRZ and other European partners develop the \alert{Periscope Tuning Framework} and the \alert{AutoTune} plugin: \href{http://periscope.in.tum.de/}{periscope.in.tum.de}.
 
-It is an online (no tracing files) measurement and tuning framework for performance and energy, built
+It is an \textbf{online} (no tracing files) analysis and tuning framework for performance and energy, built
 to work with Eclipse.
 
 It can help to decide which compiler flags and MPI parameters to use, as well as to find the
@@ -252,10 +260,10 @@ optimal CPU frequency for our code.
 \begin{frame}[fragile]{The Periscope Tuning Framework and AutoTune}
 \textbf{How does it work?}
 
-Through a graphical user interface, the user sets up the different scenarios to be checked
+Through a graphical user interface, the user sets up the different \textbf{scenarios} to be checked
 and provides a test dataset.
 
-The user also selects a search algorithm that compiles and runs the program for the different scenarios in order to find the combination of parameters that gives the optimal execution time or energy metrics.
+The user also selects a \textbf{search algorithm} that compiles and runs the program for the different scenarios in order to find the combination of parameters that gives the optimal execution time or energy metrics.
 \end{frame}
 
 \section{Summary}
