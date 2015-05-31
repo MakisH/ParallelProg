@@ -1,5 +1,5 @@
 # ParallelProg
-Material from the TUM CSE Parallel Programming course
+Material from the TUM CSE Parallel Programming course, SS 2014-15.
 
 Here you can find, mainly, my short presentation "Energy Efficiency and Optimization for Supercomputers"
 and my solutions for the tutorial exercises.
